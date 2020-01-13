@@ -1,0 +1,1 @@
+Les 2 pages actives sur le site pour le moment sont Accueil et contact
