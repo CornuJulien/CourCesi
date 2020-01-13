@@ -1,0 +1,60 @@
+.divTitre{
+  text-align: center;
+  color: #6e6356;
+}
+
+.navClass{
+  margin: 10px;
+  padding: 5px;
+}
+
+.navClass li{
+  display: inline;
+  margin: 2px ;
+  padding: 15px;
+  background-color: #96d343;
+  border-radius: 20px;
+}
+
+.navClass li a{
+  text-decoration: none;
+  color:  #6e6356;
+}
+
+.presentation{
+  color: #6e6356;
+  text-align: justify;
+  padding: 20px;
+}
+
+.structure{
+  text-align: center;
+  color: #6e6356;
+}
+
+.decisionnel{
+  color: #6e6356;
+  text-align: center;
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.contact{
+  color: #6e6356;
+  text-align: justify;
+  padding: 20px;
+}
+
+.formulaire{
+  color: #6e6356;
+  text-align: justify;
+  padding: 20px;
+}
+
+input{
+  margin : 10px;
+}
