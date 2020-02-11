@@ -1,0 +1,55 @@
+body {
+ margin-left: 2em;
+ margin-right: 2em;
+ margin-top: 0;
+ margin-bottom: 0;
+}
+
+a{
+  color: #000;
+}
+
+.enTete{
+  text-align: center;
+  color : #6e6356;
+}
+
+.navBar{
+  text-align: center;
+}
+
+.nav1{
+  grid-area: nav1;
+}
+
+.nav2{
+  grid-area: nav2;
+}
+
+.navBar ul{
+background-color: #444;
+border-radius: 10px;
+padding: 10px;
+}
+
+.navBar li{
+  display:  inline;
+  text-decoration: none;
+  padding: 1em;
+
+}
+
+.navBar li a{
+  text-decoration: none;
+  padding: 15px;
+  color:  #fff;
+}
+
+.navBar li a:hover{
+  background-color: white;
+  color: black;
+}
+
+.title {
+    grid-area: title;
+}
