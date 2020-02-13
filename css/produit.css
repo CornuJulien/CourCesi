@@ -63,7 +63,7 @@
  @media only screen and (min-width: 992px)   {
      .wrapper {
          grid-gap: 20px;
-         grid-template-columns: 80%  20%;
+         grid-template-columns: 2fr  8fr;
          grid-template-areas:
          "navBar   navBar navBar"
            "titreOFfres  titreOFfres  titreOFfres"
