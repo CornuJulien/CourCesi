@@ -1,70 +1,117 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
-    <title>Projet Madera</title>
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <img src="img/madera.png" alt="Maison modulaire ">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/accueil.css">
+
+  <title>Projet Madera</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="img/madera.PNG" alt="Maison modulaire ">
+    </div>
+    <div class="enTete">
+      <h1>Entreprise Madera</h1>
+    </div>
+    <nav class="navBar">
+      <ul>
+        <li><a href="#" class="Accueil">Accueil</a></li>
+        <li><a href="entreprise.html" class="entreprise">L'entreprise</a></li>
+        <li><a href="produit.html" class="produit">Nos Produits</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="wrapper">
+    <form id="main" v-cloak class="article">
+      <div class="bar">
+        <input type="text" v-model="searchString" placeholder="Rechercher un article" />
       </div>
-    </header>
-    <main>
-      <div class="divTitre">
-        <h1>Entreprise Madera</h1>
+      <ul>
+        <li v-for="article in filteredArticles" class="article2">
+          <a v-bind:href="article.url"><img v-bind:src="article.image" alt="article"/></a>
+          <p>{{article.title}}</p>
+        </li>
+      </ul>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js"></script>
+    <script>
+    /*Création d'une vue demo qui va créer l'instance */
+      var demo = new Vue({
+        el: '#main',
+        data: {
+          searchString: "",
+
+          articles: [{
+              "title": "Création d'espace de vente",
+              "url": "http://madera-construction.fr/tertiaire/23-bureaux/14-creation-d-un-espace-de-vente-pour-le-promoteur-immobilier-sara-angers-49",
+              "image": "img/imageAccueil/image1.PNG"
+            },
+            {
+              "title": "Nouveau batiment pour l'armée de terre",
+              "url": "http://madera-construction.fr/tertiaire/23-bureaux/23-construction-de-deux-batiments-de-bureaux-a-l-ile-du-levant-83",
+              "image": "img/imageAccueil/image2.PNG"
+            },
+            {
+              "title": "Batîment pour un camping",
+              "url": "http://madera-construction.fr/tertiaire/26-locaux-divers/17-creation-d-un-local-accueil-et-d-un-batiment-sanitaire-au-camping-de-bourgenay-talmont-st-hilaire-85",
+              "image": "img/imageAccueil/image3.PNG"
+            },
+            {
+              "title": "Création de la symbio2-box à saint nazaire",
+              "url": "http://madera-construction.fr/tertiaire/26-locaux-divers/29-creation-de-la-symbio2-box-a-saint-nazaire-44",
+              "image": "img/imageAccueil/image4.PNG"
+            }
+          ]
+        },
+        computed: {
+          // A computed property that holds only those articles that match the searchString.
+          filteredArticles: function() {
+            var articles_array = this.articles,
+              searchString = this.searchString;
+
+            if (!searchString) {
+              return articles_array;
+            }
+
+            searchString = searchString.trim().toLowerCase();
+
+            articles_array = articles_array.filter(function(item) {
+              if (item.title.toLowerCase().indexOf(searchString) !== -1) {
+                return item;
+              }
+            })
+
+            // Return an array with the filtered data.
+            return articles_array;;
+          }
+        }
+      });
+    </script>
+  </main>
+  <footer>
+    <div class="contenus">
+      <div class="copyright">
+        <p>© 2020 Madera</p>
       </div>
-      <nav class="navClass">
-        <ul>
-          <li><a href="#" class="Accueil">Accueil</a></li>
-          <li><a href="entreprise.html" class="entreprise">L'entreprise</a></li>
-          <li><a href="produit.html" class="produit">Nos Produits</a></li>
-          <li><a href="contact.html" class="contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="divTitre">
-        <h2>Actualitées Entreprise madera</h2>
-      </div>
-      <div class="actualitee">
-        <div class="titreActu">
-          <h3>Nouveau locaux sur Nantes</h3>
+      <div class="reseau">
+        <div class="image facebook">
+          <a href="https://www.facebook.com/Madera-construction-bois-170020203016473/"><img src="img/facebook.png" alt="facebook"></a>
         </div>
-        <aside class="imageActu">
-          <img src="img/bureau.png" alt="bureau">
-        </aside>
-        <div class="contentActu">
-          <p>Nouveau locaux au chanteris de nantes.</p>
+        <div class="image twitter">
+          <a href="https://twitter.com/MaderaConstruct"><img src="img/twitter.png" alt="twitter"></a>
         </div>
-        <div class="titreActu2">
-          <h3>15 Nouveaux logement sociaux sur montaigu</h3>
-        </div>
-        <aside class="imageActu2">
-          <img src="img/sociaux.png" alt="bureau">
-        </aside>
-        <div class="contentActu2">
-          <p>Nouveau locaux au chanteris de nantes.</p>
+        <div class="image instagram">
+          <a href="https://www.instagram.com/visitmadeira/?hl=fr"><img src="img/instagram.jpg" alt="instagram"></a>
         </div>
       </div>
-    </main>
-    <footer>
-      <div class="contenus">
-        <div class="copyright">
-          <p>© 2020 Madera</p>
-        </div>
-        <div class="reseau">
-          <div class="image facebook">
-            <a href="https://www.facebook.com/Madera-construction-bois-170020203016473/"><img src="img/facebook.png" alt="facebook"></a>
-          </div>
-          <div class="image twitter">
-            <a href="https://twitter.com/MaderaConstruct"><img src="img/twitter.png" alt="twitter"></a>
-          </div>
-          <div class="image instagram">
-            <a href="https://www.instagram.com/visitmadeira/?hl=fr"><img src="img/instagram.jpg" alt="instagram"></a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+</body>
+
 </html>
