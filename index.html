@@ -34,8 +34,10 @@
       </div>
       <ul>
         <li v-for="article in filteredArticles" class="article2">
-          <a v-bind:href="article.url"><img v-bind:src="article.image" alt="article"/></a>
-          <p>{{article.title}}</p>
+          <img v-bind:src="article.image" alt="article"/>
+          <div class="description">
+            <a v-bind:href="article.url">{{article.title}}</a>
+          </div>
         </li>
       </ul>
     </form>
@@ -48,7 +50,7 @@
           searchString: "",
 
           articles: [{
-              "title": "Création d'espace de vente",
+              "title": " Création d'espace de vente",
               "url": "http://madera-construction.fr/tertiaire/23-bureaux/14-creation-d-un-espace-de-vente-pour-le-promoteur-immobilier-sara-angers-49",
               "image": "img/imageAccueil/image1.PNG"
             },

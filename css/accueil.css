@@ -1,5 +1,11 @@
 [v-cloak] {
   display: none;
+  color: #6e6356;
+}
+
+.description a{
+  text-decoration: none;
+  color: black;
 }
 
 .bar{
@@ -35,7 +41,7 @@
     text-align: center;
 }
 
- .article ul{
+.article ul{
    padding : inherit;
     list-style: none;
     display: block;
@@ -56,9 +62,10 @@
     border:none;
 }
 
-.article ul li p{
-    font-weight: bold;
-    color:#6e7a7f;
+.article ul li .description{
+  font-size: 1em;
+  font-weight: bold;
+  color:#6e7a7f;
 }
 
 .wrapper {
@@ -85,6 +92,10 @@
    .navBar ul li a{
      text-decoration: none;
      padding: 1em;
+   }
+
+   .article ul li .description{
+     font-size: 1.5em;
    }
  }
 
