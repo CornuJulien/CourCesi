@@ -44,6 +44,10 @@
   "bureau2 content2 content2"
 }
 
+.wrapper img{
+  width: 100%;
+}
+
 .box {
  background-color: #444;
  color: #fff;

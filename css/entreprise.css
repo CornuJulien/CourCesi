@@ -1,40 +1,35 @@
 .titrePresentation {
-    grid-area: titrePresentation;
     background-color: #444;
     color: #fff;
     border-radius: 5px;
     font-size: 2em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+    grid-area: titrePresentation;
 }
 
 .titreStructure {
-    grid-area: titreStructure;
     background-color: #444;
     color: #fff;
     border-radius: 5px;
     font-size: 2em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+    grid-area: titreStructure;
 }
 
 .presentation {
-    grid-area: presentation;
     text-align: justify;
     font-size: 150%;
+    grid-area: presentation;
+
 }
 
-.structure {
+.structure img {
+  width: 100%;
     grid-area: structure;
 }
 
-.wrapper {
-     background-color: #fff;
-     color: #444;
-     margin: 50px;
-     text-align: center;
-     font-size: 1em;
- }
 
 .wrapper {
  display: grid;
@@ -45,6 +40,16 @@
   "titreStructure"
   "structure"
 }
+
+.wrapper {
+     background-color: #fff;
+     color: #444;
+     margin: 50px;
+     text-align: center;
+     font-size: 1em;
+ }
+
+
 
  @media only screen and (min-width: 768px)  {
  .wrapper {
@@ -65,8 +70,6 @@
      padding: 1em;
    }
  }
-
-
 
  @media only screen and (min-width: 992px)   {
      .wrapper {

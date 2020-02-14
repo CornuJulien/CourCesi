@@ -6,6 +6,7 @@ body{
    margin-bottom: 0;
 }
 
+
 .enTete{
   text-align: center;
   color : #6e6356;
@@ -45,35 +46,24 @@ footer{
   color: #fff
 }
 
-.reseau{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-gap: 10px;
-  padding: 1em;
-}
-
 .facebook{
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  width: 80%;
+  grid-area : facebook;
 }
 
 .twitter{
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  width: 80%;
+  grid-area: twitter;
 }
 
 .instagram{
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 2;
+  grid-area : instagram;
+}
+
+.wrapperReseau{
+  display: grid;
+  grid-gap: 1em;
+  grid-column: 1fr 1fr 1fr 7fr;
+  grid-template-areas:
+  "facebook twitter instagram"
 }
 
 .copyright{
@@ -81,11 +71,9 @@ footer{
   padding-top: 10px;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+.image a{
+  color: inherit;
 }
-
 
 @media only screen and (min-width: 768px){
   .navBar{
